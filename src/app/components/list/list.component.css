@@ -1,0 +1,26 @@
+::ng-deep .custom-slide-toggle {
+  margin: 10px 0;
+  transform: scale(1.1);
+}
+
+::ng-deep .custom-slide-toggle .mdc-switch {
+  --mdc-switch-selected-track-color: hsl(3, 71%, 56%);
+  --mdc-switch-unselected-track-color: #aaaaaa;
+
+  --mdc-switch-selected-hover-track-color: hsl(3, 71%, 56%);
+  --mdc-switch-unselected-hover-track-color: hsl(226, 25%, 27%);
+  --mdc-switch-selected-hover-handle-color: #ffffff;
+  --mdc-switch-unselected-hover-handle-color: ;
+
+  --mdc-switch-selected-pressed-track-color: hsl(3, 71%, 56%);
+  --mdc-switch-unselected-pressed-track-color: #444444;
+  --mdc-switch-selected-pressed-handle-color: #eeeeee;
+  --mdc-switch-unselected-pressed-handle-color: #bbbbbb;
+
+  --mdc-switch-selected-handle-color: white;
+  --mdc-switch-unselected-handle-color: white;
+}
+
+::ng-deep .custom-slide-toggle .mdc-switch__icons {
+  display: none;
+}

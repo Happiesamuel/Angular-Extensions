@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-Paint-900: var(--Paint-900);
+  --color-Paint-800: var(--Paint-800);
+  --color-Paint-700: var(--Paint-700);
+  --color-Paint-600: var(--Paint-600);
+  --color-Paint-500: var(--Paint-500);
+  --color-Paint-400: var(--Paint-400);
+  --color-Paint-300: var(--Paint-300);
+  --color-Paint-200: var(--Paint-200);
+  --color-Paint-100: var(--Paint-100);
+
+  --color-wine-400: var(--wine-400);
+  --color-wine-500: var(--wine-500);
+  --color-wine-700: var(--wine-700);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --secondary: oklch(0.97 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+
+  --wine-400: hsl(3, 86%, 64%);
+  --wine-500: hsl(3, 71%, 56%);
+  --wine-700: hsl(3, 77%, 44%);
+
+  --Paint-900: hsl(227, 75%, 14%);
+  --Paint-800: hsl(226, 25%, 17%);
+  --Paint-700: hsl(225, 23%, 24%);
+  --Paint-600: hsl(226, 11%, 37%);
+  --Paint-300: hsl(0, 0%, 78%);
+  --Paint-200: hsl(217, 61%, 90%);
+  --Paint-100: hsl(0, 0%, 93%);
+  --Paint-0: hsl(200, 60%, 99%);
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("/assets/fonts/static/NotoSans-Medium.ttf") format("woff2"),
+    url("/assets/fonts/static/NotoSans-Medium.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  transition: all 5s ease;
+}
+body {
+  margin: 0;
+  font-family: "NotoSans", sans-serif;
+  transition: all 5s ease;
+}
+
+.app {
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+.apps {
+  transition: all 0.5s;
+}

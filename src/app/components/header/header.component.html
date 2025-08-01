@@ -1,0 +1,22 @@
+<header
+  [ngClass]="{ 'bg-Paint-800': darkMode }"
+  class="w-full apps flex items-center bg-Paint-100 justify-between px-3 py-2 rounded-xl"
+>
+  <img *ngIf="darkMode" src="assets/images/logo_png.png" class="w-[150px]" />
+  <img *ngIf="!darkMode" src="assets/images/logo.svg" class="w-[150px]" />
+  <div
+    (click)="handleClick()"
+    
+    *ngIf="darkMode"
+    class="rounded-md bg-Paint-700 p-1.5 apps"
+  >
+    <img src="assets/images/icon-sun.svg" class="w-[20px] cursor-pointer" />
+  </div>
+  <div
+    (click)="handleClick()"
+    *ngIf="!darkMode"
+    class="rounded-md bg-Paint-300 p-1.5 apps"
+  >
+    <img src="assets/images/icon-moon.svg" class="w-[20px] cursor-pointer" />
+  </div>
+</header>

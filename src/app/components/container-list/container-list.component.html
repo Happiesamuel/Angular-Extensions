@@ -1,0 +1,21 @@
+<div>
+  @if(loading){
+  <div>load</div>
+  }@else {
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center w-full"
+  >
+    <ng-container *ngFor="let item of newExtension">
+      <app-list
+        [darkMode]="darkMode"
+        [handleClick]="handleClick"
+        [extensions]="extensions"
+        [newExtension]="newExtension"
+        [extension]="item"
+        [active]="active"
+        (activeChange)="handleChange($event)"
+      ></app-list>
+    </ng-container>
+  </div>
+  }
+</div>
