@@ -4,7 +4,7 @@
       ? 'bg-Paint-700/50 border-Paint-700'
       : 'bg-Paint-100 border-zinc-300'
   "
-  class="flex apps flex-col justify-between p-4.5 relative max-w-sm w-full rounded-2xl border-2 h-[180px]"
+  class="flex apps flex-col justify-between pb-2 pt-4.5 px-4.5 relative max-w-sm w-full rounded-2xl border-2 h-[180px]"
 >
   <div class="flex items-start gap-4">
     <img [src]="extension.logo" />
@@ -23,14 +23,15 @@
       </p>
     </div>
   </div>
-  <div class="bottom-[10%] flex items-center justify-between w-full">
+  <div class="flex items-center justify-between w-full">
     <button
+    (click)="handleDelete(extension.name)"
       [ngClass]="
         darkMode
           ? 'text-Paint-100/80 border-Paint-600'
           : 'text-Paint-700 border-zinc-300'
       "
-      class="cursor-pointer px-2.5 py-1 transition-all duration-500 rounded-2xl border text-xs md:text-sm"
+      class="cursor-pointer hover:bg-wine-500 hover:border-none px-2.5 py-1 transition-all duration-500 rounded-2xl border text-xs md:text-sm"
     >
       Remove
     </button>

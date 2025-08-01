@@ -23,6 +23,11 @@ export class ListComponent {
     newExten: Extension[];
   }>();
   @Input() handleClick!: (name: string) => void;
+  handleDelete(name: string) {
+    this.exten = this.extensions.filter((x) => x.name !== name);
+    this.newExten = this.newExtension.filter((x) => x.name !== name);
+    this.clic(this.exten, this.newExten);
+  }
   handleClicks(name: string) {
     this.exten = this.extensions.map((exten) => {
       return exten.name === name
